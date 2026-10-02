@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/Bow-T/bow-agent/main/schema/bow-skill.schema.json",
+  "id": "stripe",
+  "label": "Stripe",
+  "version": "1.0.0",
+  "description": "Bộ skill cho công nghệ Stripe — 2 skill chính thức của Stripe (chọn API thanh toán, Connect, Billing, Tax; nâng phiên bản API / SDK), chép nguyên văn (xem THIRD_PARTY.md). Không gắn với framework nào, ghép được với Flutter / Next.js / React Native.",
+  "maintainer": "bow-agent",
+  "skillsDir": "skills",
+  "targets": {
+    "detect": [
+      { "file": "package.json", "contains": "\"stripe\"" },
+      { "file": "package.json", "contains": "\"@stripe/" },
+      { "file": "pubspec.yaml", "contains": "flutter_stripe" }
+    ]
+  },
+  "skills": [
+    "stripe-best-practices",
+    "upgrade-stripe"
+  ]
+}
